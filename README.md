@@ -1,7 +1,17 @@
 # coruna-buffout
 A work-in-progress re-implementation of the buffout WebKit exploit for CVE-2021-30952 used in the 'Coruna' iOS spyware
 
-This is a result of analysing the obfuscated JS files captured from a live sample of the Coruna spyware on an iOS 14 iPhone.
+Output
+```
+[+] setting up stuff...
+[+] prepping the jit...
+[+] jit'd our trigger function
+[+] set object
+[+] leaked fake obj 0x00000001077a4000
+[+] that's all for now!
+```
+
+This work is a result of analysing the obfuscated JS files captured from a live sample of the Coruna spyware on an iOS 14 iPhone.
 
 I've determined that the main trigger for this JIT vulnerability is the following function, originally base64 encoded under the `const d` in the sample. It leads to an out of bounds access on the target array `t`.
 ```C
