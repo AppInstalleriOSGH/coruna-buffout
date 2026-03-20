@@ -50,3 +50,6 @@ function jit_me(t, e, r, f, n, i, other_array, nested_idx, u, oob_value) {
             return-4
         }
 ```
+
+## Credits
+-  [wh1te4ever](https://github.com/wh1te4ever) for [WebKit-Bug-256172 exploit](https://github.com/wh1te4ever/WebKit-Bug-256172) 
